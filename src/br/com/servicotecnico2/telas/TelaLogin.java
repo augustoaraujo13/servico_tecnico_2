@@ -1,6 +1,7 @@
 package br.com.servicotecnico2.telas;
 //Pacotes para auxiliar os metedos do classe.
 import br.com.servicotecnico2.conexao.Conexao;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,7 +21,9 @@ public class TelaLogin extends javax.swing.JFrame {
     public TelaLogin() {
         initComponents();
         //Chama classe conexao para poder conectar o programa ao banco de dados.
-        conn = Conexao.abrirBanco();
+        conn = Conexao.abrirBanco();    
+        
+        //setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/br.com.servicotecnico2.imagens/logo1.png")));
         
         /*Desvio condicional para exboir na tela login se o program etsá cocnectado ao 
         banco ou não*/
